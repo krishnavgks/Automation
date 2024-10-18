@@ -1,0 +1,57 @@
+What is JSON Path
+What is the use of Json Path
+How to write simple JSON Path(jsonpath.com)
+Complex JSON Path with Array
+Complex JSON path with Object
+
+{
+    "Name": "Delhi",
+    "Age": 23,
+    "city": ["Delhi", "Mumbai", "Bangalore"],
+    "Address": 
+    {
+        "StreetName": "ABCD",
+        "HouseNumber": "230",
+        "Number": 
+        {
+            "Landline": 1234567,
+            "Mobile": 7406801810
+        }
+    }
+}
+
+$.Address.Number.Mobile
+
+
+
+Get C# from the below: Answer:- $.data.TechnicalDetails[0].language[1]
+{
+    "status": true,
+    "data": 
+    {
+        "fname": "Test Engineer",
+        "Mname": "mname",
+        "TechnicalDetails": [
+            {
+                "id": 25,
+                "language": [
+                    "Java",
+                    "C#"
+                    ],
+                "YearsExp": "8Yrs",
+                "lastused": "2020"
+            }
+        ],
+        "Address": 
+        {
+        "StreetName": "ABCD",
+        "HouseNumber": "230",
+        "Number": 
+           {
+            "Landline": 1234567,
+            "Mobile": 7406801810
+           }
+        }   
+            
+    }
+}

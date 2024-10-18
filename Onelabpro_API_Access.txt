@@ -1,0 +1,25 @@
+from onelabpro_pyapi import *
+c = Controller("hse-c1-a-0052")
+scenario = c.Scenarios.add()
+scenarioId = scenario['id']
+scenarioId
+c.Scenarios[scenarioId].set(name="Silpa_Port_7_8")
+c.Scenarios[scenarioId].Ports.Profiles.list()
+c.Scenarios[scenarioId].Ports.add(count=1, profile= 'HSE800_QSFPDD800_800GAUI8_PHY_ETHERNET_STRAIGHT', orientation= "west")
+c.Scenarios[scenarioId].Ports.add(count=1, profile= 'HSE800_QSFPDD800_800GAUI8_PHY_ETHERNET_STRAIGHT', orientation= "east")
+c.Scenarios[scenarioId].Ports.list()
+
+c.Scenarios[scenarioId].Ports.Profiles['HSE800_QSFPDD800_800GAUI8_PHY_ETHERNET_STRAIGHT'].Mappings.get()
+{'free': True, 'mappingUuid': '410001010A0051:1:HSE800_QSFPDD800_800GAUI8_PHY_ETHERNET_STRAIGHT:7', 'module': {'moduleLocation': '1', 'moduleType': 'HSE-800', 'serialNumber': '410001010A0051'}, 'portLocation': '7', 'usage': 'free', 'user': ''},
+{'free': True, 'mappingUuid': '410001010A0051:1:HSE800_QSFPDD800_800GAUI8_PHY_ETHERNET_STRAIGHT:8', 'module': {'moduleLocation': '1', 'moduleType': 'HSE-800', 'serialNumber': '410001010A0051'}, 'portLocation': '8', 'usage': 'free', 'user': ''}]
+
+port_1 = c.Scenarios[scenarioId].Ports.list()[0]
+port_2 = c.Scenarios[scenarioId].Ports.list()[1]
+port1=port_1['id'] 
+port2=port_2['id'] 
+mappingUuid_7="410001010A0051:1:HSE800_QSFPDD800_800GAUI8_PHY_ETHERNET_STRAIGHT:7"
+mappingUuid_8="410001010A0051:1:HSE800_QSFPDD800_800GAUI8_PHY_ETHERNET_STRAIGHT:8"
+c.Scenarios[scenarioId].Ports.map(mappings={"mappingUuid": mappingUuid_7, "id": port1 })
+c.Scenarios[scenarioId].Ports.map(mappings={"mappingUuid": mappingUuid_8, "id": port2 })
+c.Scenarios[scenarioId].Ports.list()
+has context menu

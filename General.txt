@@ -1,0 +1,49 @@
+
+The first week I had received the laptop after couple of days and had finished induction related meetings and joining documentation things part of induction. 
+Finished setting up all the credential access related issues where I had an issue with Viavi credentials initially for a day.
+The next week had a sync call with Kevin, had gone through the Training HSE all the video tutorials and setup configured all the environment for the test execution.
+
+
+Hi Andreea,
+
+Is there any mentoring sessions will be scheduled regarding getting into the work and understanding more about ...
+
+
+from onelabpro_pyapi import *
+controller = Controller("hse-c1-xx-203")
+controller.Scenarios.list()
+controller.Scenarios.list[2].Multiportapps[1].
+
+from olaf.framework.backend.utils.controller import *
+controller = ContollerObj('hse-c1-xx-203')
+scenario = controller.addScenario('TestKrishna')
+scenario.validateScenario()
+scenario.name
+scenario.id
+
+
+utils-folder
+controller.py
+devclusterlayers.py
+multiportapp.py
+port.py
+scenario.py
+tfgclusterlayers.py
+tfgclusters.py
+
+
+(venv) olaf$ olaf --test=hase-tests/backend/sanity_tests
+olaf --help
+olaf --test=hse-tests/backend/R1/R1_Scenario/R1_Scenario_Management/test_scenario_001_Create_Scenario.py --controller-ip=hse-c1-xx-203 --setup=setup_automation_800G.yaml --pytest --log-type allure
+olaf --test=hse-tests/backend/R1/R1_NetEmu/test_framework/test_1234.py --controller-ip=hse-c1-xx-203 --setup=setup_automation_800G_PHY_ETHERNET_STRAIGHT.yaml --pytest -s 
+
+olaf --install-meta-package=True --build-id=latest --controller-list=hse-c1-ca-0068
+
+jenkins URL for nightly images of our controller -
+https://enijenkins01.ds.jdsu.net/job/hseproducts/job/nightly_master/
+
+Jenkins allure report containing execution of all automation tests:
+https://enijenkins01.ds.jdsu.net/job/hseproducts/job/nightly_master_test/
+
+
+pyapi	commands sent	output
